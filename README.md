@@ -18,7 +18,7 @@ After cloning the repo, simply run `make` to compile the program.
 
 As said at the end of the description, a file acting as a scene description with the
  `.cub` extension will contain all relevant information for the programm to output what's wanted:
--The map must be composed of only 6 possible characters: 0 for an empty space,
+- The map must be composed of only 6 possible characters: 0 for an empty space,
 1 for a wall, and N,S,E or W for the player’s start position and spawning orientation.\
 This is a simple valid map:
 ```
@@ -28,9 +28,9 @@ This is a simple valid map:
 1100N1
 111111
 ```
--The map must be closed/surrounded by walls, if not the program must return
+- The map must be closed/surrounded by walls, if not the program must return
 an error.
--Except for the map content, each type of element can be separated by one or
+- Except for the map content, each type of element can be separated by one or
 more empty lines.
 
 # Resources
