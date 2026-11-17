@@ -32,16 +32,14 @@ This is a simple valid map:
 111111
 ```
 - The map must be closed/surrounded by walls, if not, an error will be returned.
-
 - Except for the map content, each type of element can be separated by one or
 more empty lines. As well, each type of information from an element can be separated
 by one or more spaces.
-
 - Except for the map content which always has to be the last, each type of
 element can be set in any order in the file
-
 - Except for the map, each element must begin with its type identifier (composed
 by one or two characters), followed by its specific information in a strict order:
+
   - North texture:\
 `NO ./path_to_the_north_texture`
     - identifier: NO
