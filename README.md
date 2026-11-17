@@ -8,7 +8,7 @@ First, a 2d map arranged in a grid composed of 0 or 1,
  0 being an empty square and 1 being a full square, aka a wall in common language.\
 Once a map exists, the engine will launch rays across the player's FOV to get how far its position is from the nearest wall.
 Then, its draws the wall bigger or smaller to simulate a depth effect.\
-As for the ceiling and the floor, a scene description file contains the colors allows to simply fill out the rest of the screen.\
+As for the ceiling and the floor, a scene description file contains the colors allows to simply fill out the rest of the screen.
 
 # Instructions
 
@@ -21,11 +21,13 @@ As said at the end of the description, a file acting as a scene description with
 -The map must be composed of only 6 possible characters: 0 for an empty space,
 1 for a wall, and N,S,E or W for the player’s start position and spawning orientation.\
 This is a simple valid map:
-`111111`\
-`100101`\
-`101001`\
-`1100N1`\
-`111111`\
+```
+111111
+100101
+101001
+1100N1
+111111
+```
 -The map must be closed/surrounded by walls, if not the program must return
 an error.
 -Except for the map content, each type of element can be separated by one or
