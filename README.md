@@ -32,38 +32,43 @@ This is a simple valid map:
 111111
 ```
 - The map must be closed/surrounded by walls, if not, an error will be returned.
+
 - Except for the map content, each type of element can be separated by one or
 more empty lines. As well, each type of information from an element can be separated
 by one or more spaces.
+
 - Except for the map content which always has to be the last, each type of
 element can be set in any order in the file
+
 - Except for the map, each element must begin with its type identifier (composed
 by one or two characters), followed by its specific information in a strict order:
 
   - North texture:\
-`NO ./path_to_the_north_texture`
+  `NO ./path_to_the_north_texture`
     - identifier: NO
     - path to the north texture
   - South texture:\
-`SO ./path_to_the_south_texture`
+  `SO ./path_to_the_south_texture`
     - identifier: SO
     - path to the south texture
   - West texture:\
-`WE ./path_to_the_west_texture`
+  `WE ./path_to_the_west_texture`
     - identifier: WE
     - path to the west texture
   - East texture:\
-`EA ./path_to_the_east_texture`
+  `EA ./path_to_the_east_texture`
     - identifier: EA
     - path to the east texture
   - Floor color:\
-`F 220,100,0`
+  `F 220,100,0`
     - identifier: F
     - R,G,B colors in range [0,255]: 0, 255, 255
   - Ceiling color:\
-`C 225,30,0`
+  `C 225,30,0`
     - identifier: C
     - R,G,B colors in range [0,255]: 0, 255, 255
+
+You can also take a look at the files in the folder `maps` to see how a map config file can be setup.
 
 # Resources
 
