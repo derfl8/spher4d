@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:56:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/18 11:47:13 by abegou           ###   ########.fr       */
+/*   Updated: 2026/11/18 13:29:10 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ typedef struct s_player
 {
 	double					x;
 	double					y;
-	char					compass;
+	char					spawn_dir;
 }							t_player;
 
 typedef struct s_data

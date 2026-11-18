@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:55:33 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/18 12:55:17 by abegou           ###   ########.fr       */
+/*   Updated: 2026/11/18 13:31:46 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void    err_exit(t_data *data, char *err_msg)
     exit(1);
 }
 
-int    verif_filename(int ac, char **av)
+int    check_filename(int ac, char **av)
 {
     if (ac != 2)
         return (1);
