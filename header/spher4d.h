@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:56:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/18 13:29:10 by abegou           ###   ########.fr       */
+/*   Updated: 2026/11/18 14:30:31 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,15 @@ typedef struct s_map
 	int						height;
 }							t_map;
 
-typedef struct s_player
+typedef struct s_vector
 {
 	double					x;
 	double					y;
+}							t_vector;
+
+typedef struct s_player
+{
+	t_vector				coords;
 	char					spawn_dir;
 }							t_player;
 
