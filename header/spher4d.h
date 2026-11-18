@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:56:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/18 14:30:31 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/18 19:49:26 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 // libs
 
-# include "../MacroLibX/includes/mlx.h"
+//# include "../MacroLibX/includes/mlx.h"
 # include "../libft/libft.h"
 # include <fcntl.h>
 # include <limits.h>
@@ -23,6 +23,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# include "vector.h"
 
 // structs
 
@@ -42,12 +44,6 @@ typedef struct s_map
 	int						width;
 	int						height;
 }							t_map;
-
-typedef struct s_vector
-{
-	double					x;
-	double					y;
-}							t_vector;
 
 typedef struct s_player
 {
