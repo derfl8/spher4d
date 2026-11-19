@@ -2,8 +2,8 @@ NAME		= cub3D
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -g -Ofast
 
-MLX			= MacroLibX
-MLX_LIB		= $(MLX)/libmlx.so
+#MLX			= MacroLibX
+#MLX_LIB		= $(MLX)/libmlx.so
 LIBFT_PATH	= libft
 LIBFT		= $(LIBFT_PATH)/libft.a
 
@@ -12,7 +12,12 @@ LIBS		= $(LIBFT) $(MLX_LIB) -lSDL2 -lm
 
 OBJPATH		= obj/
 SRCS		=				\
-parsing/parsing.c			\
+test_main.c					\
+vector/vector_utils.c		\
+vector/vector_math.c		\
+vector/vector_len.c			\
+vector/vector_angle.c		\
+#parsing/parsing.c			\
 
 OBJS		= $(SRCS:%.c=$(OBJPATH)%.o)
 

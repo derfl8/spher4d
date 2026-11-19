@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 20:08:26 by aldecour          #+#    #+#             */
-/*   Updated: 2026/11/18 20:26:19 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/19 15:06:20 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_vector	*vec_mult(t_vector *vec, double multiplier)
 
 t_vector	*vec_div(t_vector *vec, double divisor)
 {
-	vec->x *= divisor;
-	vec->y *= divisor;
+	vec->x /= divisor;
+	vec->y /= divisor;
 	return (vec);
 }

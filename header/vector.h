@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 16:34:29 by aldecour          #+#    #+#             */
-/*   Updated: 2026/11/18 20:25:50 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/19 17:47:58 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "../libft/libft.h"
 # include <stdio.h>
+# include <math.h>
+# include <float.h>
 
 typedef struct s_vector
 {
@@ -33,7 +35,8 @@ t_vector	*vec_mult(t_vector *vec, double multiplier);
 t_vector	*vec_div(t_vector *vec, double divisor);
 
 double		vec_angle(const	t_vector *vec);
-double		vec_dot_product(const	t_vector *vec1, const t_vector *vec2);
-double		vec_angle_between(const	t_vector *vec1, const t_vector *vec2);
+double		vec_dot_product(const t_vector *vec1, const t_vector *vec2);
+//double		vec_cross_product(const t_vector *vec1, const t_vector *vec2);
+double		vec_angle_between(const t_vector *vec1, const t_vector *vec2);
 
 #endif
