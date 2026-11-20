@@ -13,7 +13,6 @@ LIBS		= $(LIBFT) $(MLX_LIB) -lSDL2 -lm
 OBJPATH		= obj/
 SRCS		=				\
 parsing/parsing.c			\
-parsing/get_next_line.c		\
 
 OBJS		= $(SRCS:%.c=$(OBJPATH)%.o)
 
