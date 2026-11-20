@@ -39,6 +39,7 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_itoa.c \
 ft_atol.c \
+get_next_line.c \
 
 SRCSB    = \
 ft_lstnew.c \

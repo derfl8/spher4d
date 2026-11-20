@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:56:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/18 14:30:31 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/20 12:24:09 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include "../MacroLibX/includes/mlx.h"
 # include "../libft/libft.h"
+# include "get_next_line.h"
 # include <fcntl.h>
 # include <limits.h>
 # include <math.h>

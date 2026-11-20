@@ -6,12 +6,15 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:08:44 by abegou            #+#    #+#             */
-/*   Updated: 2026/06/11 20:54:33 by abegou           ###   ########.fr       */
+/*   Updated: 2026/11/20 12:21:05 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 // libs
 # include <stdlib.h>
@@ -49,6 +52,7 @@ char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_atoi(const char *nptr);
 long long	ft_atol(const char *nptr);
 void		*ft_calloc(size_t nmemb, size_t size);
+char		*get_next_line(int fd);
 char		*ft_strndup(const char *s, size_t size);
 char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
