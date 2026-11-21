@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:39:55 by aldecour          #+#    #+#             */
-/*   Updated: 2026/11/19 17:47:39 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/21 23:32:58 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,5 @@ double		vec_angle_between(const t_vector *vec1, const t_vector *vec2)
 	angle2 = vec_angle(vec2);
 	return (angle1 - angle2);
 }
+
+t_vector	vec_rotate(t_vector *vec, const double angle)
