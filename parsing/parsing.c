@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:55:33 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/20 11:47:48 by abegou           ###   ########.fr       */
+/*   Updated: 2026/11/25 22:31:18 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,48 +22,54 @@ void	free_tab(char **tab)
 	while (tab[i])
 		free(tab[i++]);
 	free(tab);
-	return ;
 }
 
-void    init_data(t_data *data)
+void	init_data(t_data *data)
 {
-    ft_bzero(data, sizeof(t_data));
-    data->texture.floor = -1;
-    data->texture.sky = -1;
+	ft_bzero(data, sizeof(t_data));
+	data->texture.floor = -1;
+	data->texture.sky = -1;
 }
 
-void    err_exit(t_data *data, char *err_msg)
+void	err_exit(t_data *data, char *err_msg)
 {
-    free(data->texture.ea);
-    free(data->texture.we);
-    free(data->texture.so);
-    free(data->texture.no);
-    free_tab(data->map.map);
-    free_tab(data->lines);
-    write(2, "Error", 5);
-    write(2, err_msg, ft_strlen(err_msg));
-    write(2, "\n", 1);
-    exit(1);
+	free(data->texture.ea);
+	free(data->texture.we);
+	free(data->texture.so);
+	free(data->texture.no);
+	free_tab(data->map.map);
+	free_tab(data->lines);
+	write(2, "Error\n", 6);
+	write(2, err_msg, ft_strlen(err_msg));
+	write(2, "\n", 1);
+	exit(1);
 }
 
-int    check_filename(int ac, char **av)
+int	check_filename(int ac, char **av)
 {
-    if (ac != 2)
-        return (1);
-    if (ft_strlen(av[1]) <= 4)
-        return (1);
-    if (ft_strncmp(av[1] + ft_strlen(av[1]) - 4, ".cub", 4))
-        return (1);
-    return (0);
+	if (ac != 2)
+		return (1);
+	if (ft_strlen(av[1]) <= 4)
+		return (1);
+	if (ft_strncmp(av[1] + ft_strlen(av[1]) - 4, ".cub", 4))
+		return (1);
+	return (0);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    t_data data;
-    (void)ac;
-    (void)av;
+	t_data	data;
+    int i = 0;
 
-    init_data(&data);
-    err_exit(&data, "TEST\n");
-    return (0);
+	init_data(&data);
+    if (check_filename(ac, av))
+        err_exit(&data, "File doesn't exist");
+    read_file(&data, av[1]);
+    while (data.lines[i])
+    {
+        printf("%s\n", data.lines[i]);
+        i++;
+    }
+    free_tab(data.lines);
+	return (0);
 }
