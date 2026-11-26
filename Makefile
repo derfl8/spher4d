@@ -11,9 +11,10 @@ INCLUDES	= -Iinclude -I$(LIBFT_PATH) -I$(MLX)/includes
 LIBS		= $(LIBFT) $(MLX_LIB) -lSDL2 -lm
 
 OBJPATH		= obj/
-SRCS		=				\
-parsing/parsing.c			\
-parsing/parse_file.c		\
+SRCS		=						\
+src/main.c						\
+src/utils.c						\
+src/parsing/read_file.c			\
 
 OBJS		= $(SRCS:%.c=$(OBJPATH)%.o)
 

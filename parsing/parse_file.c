@@ -14,9 +14,9 @@
 
 void	fill_lines(t_data *data, char *path, int n)
 {
-	int	fd;
-	int	i;
-    char    *pos;
+	int		fd;
+	int		i;
+	char	*pos;
 
 	i = 0;
 	fd = open(path, O_RDONLY);
@@ -24,13 +24,13 @@ void	fill_lines(t_data *data, char *path, int n)
 		err_exit(data, "Open failed");
 	while (i < n)
 	{
-        data->lines[i] = get_next_line(fd);
-        pos = ft_strchr(data->lines[i], '\n');
-        if (pos)
-            *pos = '\0';
-        i++;
+		data->lines[i] = get_next_line(fd);
+		pos = ft_strchr(data->lines[i], '\n');
+		if (pos)
+			*pos = '\0';
+		i++;
 	}
-    free(get_next_line(fd));
+	free(get_next_line(fd));
 	close(fd);
 }
 
@@ -56,17 +56,17 @@ int	count_lines(char *path)
 	return (i);
 }
 
-void    read_file(t_data *data, char *path)
+void	read_file(t_data *data, char *path)
 {
-    int n;
+	int	n;
 
-    n = count_lines(path);
-    if (n == -1)
-        err_exit(data, "Can't open file");
-    if (n == 0)
-        err_exit(data, "Empty file");
-    data->lines = ft_calloc(n + 1, sizeof(char *));
-    if (!data->lines)
-        err_exit(data, "Malloc failed");
-    fill_lines(data, path, n);
+	n = count_lines(path);
+	if (n == -1)
+		err_exit(data, "Can't open file");
+	if (n == 0)
+		err_exit(data, "Empty file");
+	data->lines = ft_calloc(n + 1, sizeof(char *));
+	if (!data->lines)
+		err_exit(data, "Malloc failed");
+	fill_lines(data, path, n);
 }

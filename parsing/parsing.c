@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:55:33 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/25 22:31:18 by abegou           ###   ########.fr       */
+/*   Updated: 2026/11/26 17:29:49 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,23 +53,5 @@ int	check_filename(int ac, char **av)
 		return (1);
 	if (ft_strncmp(av[1] + ft_strlen(av[1]) - 4, ".cub", 4))
 		return (1);
-	return (0);
-}
-
-int	main(int ac, char **av)
-{
-	t_data	data;
-    int i = 0;
-
-	init_data(&data);
-    if (check_filename(ac, av))
-        err_exit(&data, "File doesn't exist");
-    read_file(&data, av[1]);
-    while (data.lines[i])
-    {
-        printf("%s\n", data.lines[i]);
-        i++;
-    }
-    free_tab(data.lines);
 	return (0);
 }
