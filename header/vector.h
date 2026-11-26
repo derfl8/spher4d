@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 16:34:29 by aldecour          #+#    #+#             */
-/*   Updated: 2026/11/21 23:33:25 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/22 17:52:59 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ double		vec_dot_product(const t_vector *vec1, const t_vector *vec2);
 //double		vec_cross_product(const t_vector *vec1, const t_vector *vec2);
 double		vec_angle_between(const t_vector *vec1, const t_vector *vec2);
 
-t_vector	vec_rotate(t_vector *vec, const double angle);
+t_vector	*vec_rotate(t_vector *vec, const double angle);
 
 #endif
