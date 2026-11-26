@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:56:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/18 19:49:26 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/26 19:55:21 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,12 @@
 # include <unistd.h>
 
 # include "vector.h"
+# include "rendering.h"
 
 // structs
+
+# define SWIDTH 640
+# define SHEIGHT 480
 
 typedef struct s_texture
 {

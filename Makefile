@@ -12,11 +12,15 @@ LIBS		= $(LIBFT) $(MLX_LIB) -lSDL2 -lm
 
 OBJPATH		= obj/
 SRCS		=				\
-test_main.c					\
+main.c						\
 vector/vector_utils.c		\
 vector/vector_math.c		\
+vector/vector_math2.c		\
 vector/vector_len.c			\
 vector/vector_angle.c		\
+vector/vec_alloc.c			\
+rendering/rendering_init.c	\
+rendering/raycasting.c		\
 #parsing/parsing.c			\
 
 OBJS		= $(SRCS:%.c=$(OBJPATH)%.o)
