@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "parsing.h"
+#include "spher4d.h"
 
 void	init_data(t_data *data)
 {
@@ -26,6 +27,7 @@ int	main(int ac, char **av)
 
 	i = 0;
 	init_data(&data);
+	printf("%d\n", is_wrong_number(av[1]));
 	if (check_filename(ac, av))
 		err_exit(&data, "File doesn't exist");
 	read_file(&data, av[1]);

@@ -62,5 +62,8 @@ void	init_data(t_data *data);
 void	free_tab(char **tab);
 void	err_exit(t_data *data, char *err_msg);
 int		is_empty_line(char *line);
+int		dot_count(char *line, char c);
+int		is_wrong_number(char *numb);
+
 
 #endif

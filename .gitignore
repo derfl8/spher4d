@@ -7,8 +7,9 @@ cub3d
 *.swp
 .cache/
 .vscode/
-MacroLibX
 test*
 ptdr/*
 cub3D
-*.cub
+compile_flags.txt
+libmlx.so
+MacroLibX
