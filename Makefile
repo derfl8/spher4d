@@ -2,8 +2,8 @@ NAME		= cub3D
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -g -Ofast
 
-#MLX			= MacroLibX
-#MLX_LIB		= $(MLX)/libmlx.so
+MLX			= macroLibX
+MLX_LIB		= $(MLX)/libmlx.so
 LIBFT_PATH	= libft
 LIBFT		= $(LIBFT_PATH)/libft.a
 
@@ -21,6 +21,7 @@ vector/vector_angle.c		\
 vector/vec_alloc.c			\
 rendering/rendering_init.c	\
 rendering/raycasting.c		\
+rendering/dda.c				\
 #parsing/parsing.c			\
 
 OBJS		= $(SRCS:%.c=$(OBJPATH)%.o)
@@ -45,10 +46,12 @@ bonus: all
 clean:
 	rm -rf $(OBJPATH)
 	make -C $(LIBFT_PATH) clean
+	make -C $(MLX) clean
 
 fclean: clean
 	rm -f $(NAME)
 	make -C $(LIBFT_PATH) fclean
+	make -C $(MLX) fclean
 
 re: fclean all
 

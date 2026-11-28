@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 08:56:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/11/26 19:55:21 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/28 20:09:05 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 // libs
 
-//# include "../MacroLibX/includes/mlx.h"
+# include "../macroLibX/includes/mlx.h"
 # include "../libft/libft.h"
 # include <fcntl.h>
 # include <limits.h>
@@ -31,6 +31,9 @@
 
 # define SWIDTH 640
 # define SHEIGHT 480
+
+# define MAPWIDTH 10
+# define MAPHEIGHT 10
 
 typedef struct s_texture
 {
@@ -51,7 +54,7 @@ typedef struct s_map
 
 typedef struct s_player
 {
-	t_vector				coords;
+	t_vec					coords;
 	char					spawn_dir;
 }							t_player;
 

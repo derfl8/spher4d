@@ -6,13 +6,13 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 18:58:02 by aldecour          #+#    #+#             */
-/*   Updated: 2026/11/18 19:54:47 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/28 17:27:56 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/vector.h"
 
-char		*vec_to_str(const t_vector *vec)
+char		*vec_to_str(const t_vec *vec)
 {
 	char	*str;
 	(void) vec;

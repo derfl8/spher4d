@@ -6,17 +6,17 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 15:10:18 by aldecour          #+#    #+#             */
-/*   Updated: 2026/11/26 15:11:03 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/28 17:26:36 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/vector.h"
 
-t_vector	*vec_init(const double x, const double y)
+t_vec	*vec_init(const double x, const double y)
 {
-	t_vector	*player;
+	t_vec	*player;
 
-	player = malloc(sizeof(t_vector));
+	player = malloc(sizeof(t_vec));
 	if (!player)
 		return (NULL);
 	player->x = x;

@@ -6,30 +6,30 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:39:55 by aldecour          #+#    #+#             */
-/*   Updated: 2026/11/22 17:56:04 by aldecour         ###   ########.fr       */
+/*   Updated: 2026/11/28 17:26:46 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/vector.h"
 
-double		vec_angle(const	t_vector *vec)
+double		vec_angle(const	t_vec *vec)
 {
 	return (atan2(vec->y, vec->x));
 }
 
-double		vec_dot_product(const t_vector *vec1, const t_vector *vec2)
+double		vec_dot_product(const t_vec *vec1, const t_vec *vec2)
 {
 	return (vec1->x * vec2->x + vec1->y * vec2->y);
 }
 
 /*
-double		vec_cross_product(const t_vector *vec1, const t_vector *vec2)
+double		vec_cross_product(const t_vec *vec1, const t_vec *vec2)
 {
 	return (vec1->x * vec2->y - vec1->y * vec2->x);
 }
 */
 
-double		vec_angle_between(const t_vector *vec1, const t_vector *vec2)
+double		vec_angle_between(const t_vec *vec1, const t_vec *vec2)
 {
 	double	angle1;
 	double	angle2;
@@ -39,7 +39,7 @@ double		vec_angle_between(const t_vector *vec1, const t_vector *vec2)
 	return (angle1 - angle2);
 }
 
-t_vector	*vec_rotate(t_vector *vec, const double angle)
+t_vec	*vec_rotate(t_vec *vec, const double angle)
 {
 	double	old_x;
 	
